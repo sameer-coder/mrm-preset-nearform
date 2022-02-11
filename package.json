@@ -1,17 +1,17 @@
 {
-  "name": "bench-template-github-action-mrm-task",
+  "name": "mrm-preset-nearform",
   "version": "1.0.0",
-  "description": "An mrm task for setting up a GitHub Action template repository",
-  "main": "index.js",
-  "type": "module",
+  "description": "An mrm tasks preset for setting up a NearForm template repository",
+  "main": "config.json",
+  "type": "commonjs",
   "scripts": {
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "jest",
     "prepare": "husky install"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nearform/bench-template-github-action-mrm-task.git"
+    "url": "git+https://github.com/nearform/mrm-preset-nearform.git"
   },
   "keywords": [],
   "author": {
@@ -20,20 +20,27 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nearform/bench-template-github-action-mrm-task/issues"
+    "url": "https://github.com/nearform/mrm-preset-nearform/issues"
   },
-  "homepage": "https://github.com/nearform/bench-template-github-action-mrm-task#readme",
+  "homepage": "https://github.com/nearform/mrm-preset-nearform#readme",
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^26.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
+    "jest": "^27.5.1",
     "lint-staged": "^12.3.3",
+    "memfs": "^3.4.1",
+    "mrm": "^3.0.10",
     "prettier": "^2.5.1"
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix"
+  },
+  "dependencies": {
+    "mrm-core": "^6.1.7"
   }
 }
